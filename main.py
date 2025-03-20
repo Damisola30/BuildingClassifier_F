@@ -51,7 +51,6 @@ async def predict(file: UploadFile = File(...)):
     
      # Display the uploaded image
     
-
     # Preprocess the image
     image_tensor = preprocess_image(image_bytes)
 
