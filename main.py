@@ -32,9 +32,7 @@ def preprocess_image(image_bytes):
     """
     # Open and convert the image to RGB format
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    plt.imshow(image)  # Show the uploaded image
-    plt.axis('off')    # Hide axis for a cleaner look
-    plt.show()
+   
     # Apply preprocessing transformations
     image = transform(image)
     
@@ -52,7 +50,7 @@ async def predict(file: UploadFile = File(...)):
     image_bytes = await file.read()
     
      # Display the uploaded image
-    preprocess_image(image_bytes)
+    
 
     # Preprocess the image
     image_tensor = preprocess_image(image_bytes)
