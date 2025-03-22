@@ -39,6 +39,10 @@ def preprocess_image(image_bytes):
     # Add a batch dimension (1, C, H, W)
     image = image.unsqueeze(0)
     return image
+@app.get("/")
+def read_root():
+    return {"Project": "Building Classification Project."}
+
 
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
