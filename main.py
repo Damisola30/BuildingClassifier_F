@@ -13,7 +13,7 @@ from model.model import CNN
 # Load the trained model
 
 model = CNN()
-model.load_state_dict(torch.load("..\\BuildingClassifier_F\\model\\model.pth"))
+model.load_state_dict(torch.load("model/model.pth"))
 model.eval()  # Set the model to evaluation mode (no training behavior)
 
 # Define preprocessing transformations for input images
